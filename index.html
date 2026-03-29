@@ -1,33 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv' content="width=device-width, initial-scale=1.0">
-    <title>La bimba</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tapiocas Mundo Belo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
+
 <body>
-    <header>
-        <section>
-            <h1>Tapioca Sabor do Alan</h1>
-            <p>As melhores tapiocas da região, com ingredientes frescos e sabor inigualável.</p>
+    <header class="banner">
+        <section class="banner-content">
+            <h1>Tapiocas Mundo Belo</h1>
+            <p>As melhores tapiocas da região</p>
             <nav>
-                <a href="">Tapiocas</a>
-                <a href="">Bebidas</a>
-                <a href="">Pedido</a>
-                <a href="">Contato</a>
+                <a href="#tapiocas">Tapiocas salgadas ou doces</a>
+                <a href="#bebidas">Bebidas e Sucos</a>
+                <a href="#pedido">Pedidos</a>
+                <a href="#contato">Contato da nossa loja</a>
             </nav>
         </section>
     </header>
 
     <main>
+        <!-- seção de produtos de alimentação - Tipos distintos de tapiocas -->
+        <section id="tapiocas" class="categoria">
+            <h2>Tapiocas</h2>
+            <div class="produto">
+                <img src="images/tapioca-de-frango.jpg" alt="Tapioca de Frango">
+                <h3>Tapioca de Frango</h3>
+                <p>Frango desfiado, requeijão,mostarda, tomate, orégano e especiaria da casa</p>
+                <span class="preco">R$ 21,90</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tapioca-de-chocolate1.webp" alt="Tapioca de Chocolate">
+                <h3>Tapioca de Chocolate</h3>
+                <p>Chocolate cremoso, morango fresquinho e leite condensado</p>
+                <span class="preco">R$ 23,90</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tapioca-queijo.jpg" alt="Tapioca de queijo">
+                <h3>Tapioca de Queijo</h3>
+                <p>Mussarela fresquinho e especearia da casa</p>
+                <span class="preco">R$ 12,90</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tapioca-bacon-e-calabresa.jpeg" alt="Tapioca de carnede sol">
+                <h3>Tapioca de Bacon e Calabresa</h3>
+                <p>Bacon bem pequeno e crocante, calabresa e especearia da casa</p>
+                <span class="preco">R$ 18,90</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tapioca-ovo.jpg" alt="Tapioca de Ovo">
+                <h3>Tapioca de Ovo</h3>
+                <p>Ovo e especearia da casa</p>
+                <span class="preco">R$ 12,90</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+        </section>
+
+        <!-- Seção para inserção de bebidas disponíveis -->
+        <section id="bebidas" class="categoria">
+            <h2>Bebidas</h2>
+            <div class="produto">
+                <img src="images/refrigerante-lata.jpg" alt="Refrigerante lata">
+                <h3>Refrigerante Lata</h3>
+                <p>350ml, coca-cola, guaraná antartica e soda </p>
+                <span class="preco">R$ 7,00</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+            <div class="produto">
+                <img src="images/suco-natural.jpg" alt="Suco de frutas">
+                <h3>Suco de Frutas Natural</h3>
+                <p>300ml</p>
+                <span class="preco">R$ 11,90</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+            <div class="produto">
+                <img src="images/agua1.png" alt="Água mineral">
+                <h3>Água mineral</h3>
+                <p>500ml, com gás e sem gás</p>
+                <span class="preco">R$ 4,00</span>
+                <button class="adicionar">Adicionar</button>
+            </div>
+
+        </section>
+        <!-- Seção de registro dos itens inseridos no carrinho -->
+        <section id="pedido">
+            <h2>Seu pedido</h2>
+            <ul id="lista-pedido">
+            </ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button id="finalizar-pedido">Finalizar Pedido</button>
+        </section>
+
+        <!-- Seção responsável por apresentar os meios de contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco:</p>
+            <div class="redes-sociais">
+                <a href="https://wa.me/43991000420" target="_blank">Whatsapp</a>
+                
+            </div>
+        </section>
 
     </main>
 
     <footer>
-
+        <p> &copy; 2026 Todos os direitos reservados</p>
+        <p>Desenvolvido por: <a href="https://github.com/alanrossinedev">Alan Rossini</a></p>
     </footer>
-
-    <scrip src="script.js"><</scrip>
-    
+    <script src='script.js'></script>
 </body>
+
 </html>

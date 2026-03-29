@@ -1,0 +1,306 @@
+/* ===========================
+   ROSSINI TAPIOCAS — style.css
+   =========================== */
+
+/* ── VARIÁVEIS GLOBAIS ── */
+:root {
+    --cor-primaria: #ff9800;
+    --cor-destaque: #D85A30;
+    --cor-escura: #3a2a10;
+    --cor-fundo: #FDF6EC;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: var(--cor-fundo);
+}
+
+/* ── BANNER ── */
+.banner {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('images/tapiocas-banner.avif');
+    background-color: var(--cor-escura); /* aparece enquanto a foto carrega */
+    background-size: cover;
+    background-position: center;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--cor-primaria);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-content {
+    width: 85%;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin: 0 0 0.5rem;
+}
+
+.banner p {
+    font-size: 1.1rem;
+    margin: 0 0 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ── NAVEGAÇÃO ── */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+    border: 1.5px solid rgba(0,0,0,0.08);
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+/* ── CONTEÚDO PRINCIPAL ── */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2.5rem auto;
+}
+
+/* ── SEÇÕES ── */
+.categoria {
+    margin-bottom: 3rem;
+}
+
+.categoria h2 {
+    font-size: 1.6rem;
+    color: var(--cor-escura);
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--cor-primaria);
+    display: inline-block;
+}
+
+/* ── GRID DE PRODUTOS ── */
+@media (min-width: 600px) {
+    .categoria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+        align-items: start;
+    }
+
+    .categoria h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 599px) {
+    .produto {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
+
+/* ── CARD DE PRODUTO ── */
+.produto {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ede5d8;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;        /* ← mantém proporção sem distorcer */
+    display: block;
+}
+
+.produto h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c1e0f;
+    margin: 12px 12px 6px;
+}
+
+.produto p {
+    font-size: 0.82rem;
+    color: #777;
+    margin: 0 12px 10px;
+    line-height: 1.45;
+    flex: 1;
+}
+
+/* ── PREÇO ── */
+.preco {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--cor-destaque);
+    margin: 0 12px 10px;
+}
+
+/* ── BOTÃO ADICIONAR ── */
+.adicionar {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 0 12px 14px;
+    background-color: #4a9fd4;
+    color: #fff;
+    border: none;
+    padding: 9px 0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.adicionar:hover {
+    background-color: #2a7fb0;
+}
+
+.adicionar:active {
+    transform: scale(0.97);
+}
+
+/* ── PEDIDO ── */
+#pedido {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #ede5d8;
+    margin-bottom: 2rem;
+}
+
+#pedido h2 {
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    margin: 0 0 1rem;
+}
+
+#lista-pedido {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+#lista-pedido li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0e8dc;
+    font-size: 0.9rem;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--cor-destaque);
+    margin: 0.5rem 0 1rem;
+}
+
+#finalizar-pedido {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#finalizar-pedido:hover {
+    background-color: #e68900;
+}
+
+#finalizar-pedido:active {
+    transform: scale(0.97);
+}
+
+/* ── CONTATO ── */
+#contato {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ede5d8;
+}
+
+#contato h2 {
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    margin: 0 0 0.5rem;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.redes-sociais a:hover {
+    background-color: #1da851;
+}
+
+/* ── FOOTER ── */
+footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    background-color: #1a1107;
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
