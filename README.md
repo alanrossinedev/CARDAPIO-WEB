@@ -8,7 +8,7 @@ Site de cardápio digital para uma tapiocaria, com listagem de produtos, carrinh
 
 ## 📸 Preview
 
-> _Adicione um print do site aqui depois de publicar no GitHub Pages_
+> _![Preview](preview.png)_
 
 ---
 
